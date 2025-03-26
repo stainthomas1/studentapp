@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+</head>
+<body>
+    <h2>Student Result</h2>
+    <div th:if="${studentResult}">
+Name: studentResult.student.id}"></span></p>
+        
+        <h3>Marks</h3>
+        <p>Subject 1: <span th:text="${studentResult.student.mark1}"></span></p>
+        <p>Subject 2: <span th:text="${studentResult.student.mark2}"></span></p>
+        <p>Subject 3: <span th:text="${studentResult.student.mark3}"></span></p>
+        <p>Subject 4: <span th:text="${studentResult.student.mark4}"></span></p>
+        <p>Subject 5: <span th:text="${studentResult.student.mark5}"></span></p>
+        
+        <p><strong>Average Marks:</strong> <span th:text="${studentResult.average}"></span></p>
+        <p><strong>Result:</strong> <span th:text="${studentResult.result}"></span></p>
+    </div>
+    
+    <div th:if="${message}">
+        <p style="color:red;" th:text="${message}"></p>
+    </div>
+ 
+    <a href="/students/form">Go Back</a>
+</body>
+</html>
